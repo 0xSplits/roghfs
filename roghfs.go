@@ -14,7 +14,7 @@ import (
 
 	"github.com/0xSplits/roghfs/cache"
 	"github.com/Masterminds/semver/v3"
-	"github.com/google/go-github/v73/github"
+	"github.com/google/go-github/v75/github"
 	"github.com/spf13/afero"
 	"github.com/xh3b4sd/choreo/success"
 	"github.com/xh3b4sd/tracer"

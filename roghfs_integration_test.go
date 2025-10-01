@@ -11,7 +11,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/google/go-github/v73/github"
+	"github.com/google/go-cmp/cmp"
+	"github.com/google/go-github/v75/github"
 	"github.com/spf13/afero"
 )
 
@@ -71,14 +72,8 @@ func Test_Roghfs_Integration_root(t *testing.T) {
 	}
 
 	for i := range wht {
-		if len(loc[i]) == 0 {
-			t.Fatal("expected the local file system to contain content bytes, got empty file")
-		}
-		if len(rem[i]) == 0 {
-			t.Fatal("expected the remote file system to contain content bytes, got empty file")
-		}
-		if !bytes.Equal(loc[i], rem[i]) {
-			t.Fatal("expected both file systems to contain equal bytes, got different files")
+		if dif := cmp.Diff(loc[i], rem[i]); dif != "" {
+			t.Fatalf("-expected +actual:\n%s", dif)
 		}
 	}
 }
