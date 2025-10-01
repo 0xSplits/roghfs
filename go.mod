@@ -4,6 +4,7 @@ go 1.24.0
 
 require (
 	github.com/Masterminds/semver/v3 v3.4.0
+	github.com/google/go-cmp v0.7.0
 	github.com/google/go-github/v75 v75.0.0
 	github.com/puzpuzpuz/xsync/v4 v4.2.0
 	github.com/spf13/afero v1.15.0
