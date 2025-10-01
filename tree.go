@@ -5,7 +5,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/google/go-github/v73/github"
+	"github.com/google/go-github/v75/github"
 	"github.com/xh3b4sd/tracer"
 )
 

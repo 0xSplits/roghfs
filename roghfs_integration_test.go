@@ -11,7 +11,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/google/go-github/v73/github"
+	"github.com/google/go-github/v75/github"
 	"github.com/spf13/afero"
 )
 
